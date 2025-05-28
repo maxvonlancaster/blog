@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Комплексні числа</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Комплексні числа</h1>
+            <div class="info">Деякі цікаві задачі для школярів на тематику "Комплексні числа"</div>
+
+            <p><b>Комплексні числа</b>: розширення множини дійсних чисел, числа вигляду $x+iy$,
+                де $i$ - уявна одиниця ($i^{2}=-1$), а $x$ та $y$ - дійсні числа. </p>
+
+            <p>Візуалізуємо комплексні числа на площині!</p>
+
+            <div class="complex-visualizer">
+                <canvas id="complexCanvas" width="500" height="500"></canvas>
+                <div class="complex-inputs">
+                    <label>Дійсна частина: <input type="number" id="realInput" value="0"></label> <br>
+                    <label>Уявна частина: <input type="number" id="imagInput" value="0"></label> <br>
+                    <button onclick="plotInput()">Відобразити на графіку</button>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="problem">
+                <p><b>Формула Муавра</b>: для $z=r(\cos \varphi + i\sin \varphi)$ справджується: $$z^{n}=r^{n}(\cos
+                    n\varphi
+                    + i\sin n\varphi)$$</p>
+
+                <p>Доведення методом математичної індукції. </p>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Доведення ▾</button>
+                <div class="solution">
+                    <p>База індукції - при $n = 1$: $(r(\cos x + i\sin x))^{1} = r(\cos 1x + i\sin 1x$) <br />
+                        Припустимо тепер, що для натурального $k$ справджується $$(r(\cos x + i\sin x))^{k} = r^{k}(\cos kx + i\sin kx)$$
+                    Розглянемо тепер випадок $k+1$: 
+                    $$(r(\cos x + i\sin x))^{k + 1} = r^{k+1}(\cos kx + i\sin kx)(\cos x + i\sin x) =$$ 
+                    $$=r^{k+1}(\cos kx \cos x -\sin kx \sin x + i(\sin kx \cos x + \sin x \cos kx) )=$$ 
+                    $$= r^{k+1}(\cos(kx + x) + i\sin(kx + x)) = r^{k+1}(\cos(x(k+1)) + i\sin(x(k+1)))$$</p>
+                </div>
+            </div>
+            <br>
+
+            <b>Задачі</b>
+
+            <br />
+            <div class="problem">
+                <div><i>Задача 0.</i> Обчисліть:</div>
+                <ul>
+                    <li>$(3+2i)(2-5i)$;</li>
+
+                    <li> $1+i+i^{2}+i^{3}$;</li>
+
+                    <li> $\frac{7-i}{2+10i}$.</li>
+                </ul>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                <div class="solution">
+                    <p>$(3+2i)(2-5i) = 6 + 4i -15i - 10 i^{2} = 16 - 11i$ <br />
+                        Аналогічно розв'язуються і інші приклади</p>
+                </div>
+            </div>
+
+            <br />
+            <div class="problem">
+                <div><i>Задача 1.</i> Довести, що для довільних двох чисел, кожне з яких є сумою двох квадратів, їхній
+                    добуток також є
+                    сумою двох квадратів.</div>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                <div class="solution">
+                    <p>Нехай $a = x^{2} + y^{2}$, $b = u^{2} + v^{2}$<br>
+                        Тоді $a = x^{2} - i^{2} y^{2} = (x-iy)(x+iy)$, аналогічно $b = (u-iv)(u+iv)$.<br>
+                        $ab = ((x-iy)(u+iv))((x+iy)(u-iv)) =$ $ = (xu + yv - i(yu - xv))(xu + yv + i(yu - xv)) = $<br>
+                        $= (m-in)(m+in) = m^{2} + n^{2}$.</p>
+                </div>
+            </div>
+
+            <br />
+            <div class="problem">
+                <div><i>Задача 2.</i> При яких $p$ і $q$ многочлен $x^{4}+1$ ділиться на $x^{2}+px+q$</div>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                <div class="solution">
+                    <p>Маємо, що $x^{4} = - 1 = \cos \pi + i \sin \pi$:<br>
+                        За формулою Муавра, тоді $x = \cos \frac{\pi + 2\pi k}{4} + i \sin \frac{\pi + 2\pi k}{4} =
+                        \pm\frac{\sqrt{2}}{2} \pm i \frac{\sqrt{2}}{2}$.<br>
+                        А отже, такими ж мають бути і розв'зки рівняння $x^{2}+px+q = 0$<br>
+                        За формулою Вієта, $x_{1}x_{2} = q$, $- x_{1} - x_{2} = p$, де $x_{1}, x_{2} \in
+                        \{\pm\frac{\sqrt{2}}{2} \pm i \frac{\sqrt{2}}{2}\}$</p>
+                </div>
+            </div>
+
+
+            <br />
+            <div class="problem">
+                <div><i>Задача 3.</i> Нехай $\sin \alpha = \frac{3}{5}$. Доведіть, що $\sin 25\alpha$ має вигляд
+                    $\frac{n}{5^{25}}$, де $n$ - ціле число, що не ділиться на 5.</div>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                <div class="solution">
+                    <p> Нехай $\sin \alpha = \frac{3}{5}$, нам потрібно довести, що $\sin 25 \alpha =
+                        \frac{n}{5^{25}}$.<br>
+                        Покладемо $x = \frac{4}{5} + i\frac{3}{5}$, тоді $$x^{25} = (\frac{4}{5} + i\frac{3}{5})^{25} =
+                        $$<br>
+                        $$= (\frac{4}{5})^{25} + 25 (\frac{4}{5})^{24}\frac{3}{5} + ... + (i\frac{3}{5})^{25} = $$<br>
+                        $$= A + i\frac{3^{25} + 5m}{5^{25}}$$, де $A$, $m$ - дійсні числа<br>
+                    </p>
+                </div>
+            </div>
+
+
+            <br />
+            <div class="problem">
+                <div><i>Задача 4.</i> Доведіть, що якщо $x+iy=(s+it)^{n}$, то $x^{2}+y^{2}=(s^{2}+t^{2})^{n}$</div>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                <div class="solution">
+                    <p>$(s + it)^{n} = (r(\cos \alpha + i \sin \alpha))^{n} = r^{n} (\cos n\alpha +i\sin n \alpha ) = x
+                        + iy$<br>
+                        $x^{2} + y^{2} = r^{2n}\cos^{2} n\alpha + r^{2n}\sin^{2} n\alpha = r^{2n}(\cos^{2} n\alpha +
+                        \sin^{2} n\alpha) = $.<br>
+                        $= r^{2n} = r^{2n}(\cos^{2}\alpha + \sin^{2}\alpha )^{n} = (r^{2}\cos^{2}\alpha +
+                        r^{2}\sin^{2}\alpha )^{n} = (s^{2} + t^{2})^{n}$</p>
+                </div>
+            </div>
+
+
+
+            <br />
+            <div class="problem">
+                <div><i>Задача 5.</i> Доведіть, що $\cos \varphi + ... + \cos n\varphi = \frac{\sin \frac{n\varphi}{2}
+                    \cos \frac{n+1}{2}\varphi}{\sin \frac{\varphi}{2}}$</div>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                <div class="solution">
+                    <p>Using integration by parts:<br>
+                        Let \( u = x \), \( dv = \sin x \, dx \).<br>
+                        Then \( du = dx \), \( v = -\cos x \)<br>
+                        So, \( \int x \sin x \, dx = -x \cos x + \int \cos x \, dx = -x \cos x + \sin x + C \).</p>
+                </div>
+            </div>
+
+
+
+
+            <br />
+            <div class="problem">
+                <div><i>Задача 6.</i> Знайти всі натуральні числа $n>1$ такі, що $x^{n}+x^{2}+1$ ділиться на
+                    $x^{2}+x+1$.</div>
+                <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                <div class="solution">
+                    <p>Using integration by parts:<br>
+                        Let \( u = x \), \( dv = \sin x \, dx \).<br>
+                        Then \( du = dx \), \( v = -\cos x \)<br>
+                        So, \( \int x \sin x \, dx = -x \cos x + \int \cos x \, dx = -x \cos x + \sin x + C \).</p>
+                </div>
+            </div>
+
+            <section class="comment-section">
+                <h3>Залиште коментарій</h3>
+                <input type="text" id="nameInput" placeholder="Your name" required />
+                <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                <button id="submitButton" onclick="postComment()">Submit</button>
+
+                <h3>Коментарії</h3>
+                <div class="comments-display" id="commentsDisplay">
+
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "25-05-29-complex-numbers.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+<script src="../scripts/complex.js"></script>
+
+</html>
