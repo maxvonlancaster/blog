@@ -5,6 +5,11 @@ body {
     font-family: 'Gill Sans', sans-serif;
 }
 
+a:visited {
+    color: inherit; /* or any color you want */
+    text-decoration: none; /* optional */
+  }
+
 .columns {
     max-width: 1400px;
     margin: 3rem auto;
@@ -69,6 +74,10 @@ body {
     margin-top: 1rem;
 }
 
+.post-preview a{
+    text-decoration: none;
+}
+
 .post-preview:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -118,7 +127,7 @@ nav:hover {
 
 .dropdown-btn {
     background-color: #c7d6ff;
-    padding: 0.3rem 0.6rem;
+    padding: 0.5rem 0.9rem;
     margin: 0.3rem 0rem;
     border: none;
     border-radius: 6px;

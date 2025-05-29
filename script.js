@@ -6,7 +6,7 @@ const postFiles = [
 const previewContainer = document.getElementById('posts-preview');
 
 function loadPosts() {
-    postFiles.forEach(async (file) => {
+    postFiles.sort().reverse().forEach(async (file) => {
         try {
             const res = await fetch(`posts/${file}`);
             const html = await res.text();
