@@ -18,6 +18,13 @@ Below (copy):
     <link rel="stylesheet" href="../style.css">
     <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
     <title>Тестовий Пост</title>
+    <meta name="description" content="A blog about solving math problems. Блог про математику, розв'язання олімпіадних задач з математики.">
+    <meta name="keywords" content="math, complex numbers, algebra, educational blog, math problems, олімпіадні задачі, математика">
+    <meta name="author" content="Василь Мельник">
+    <meta property="og:title" content="Блог про математику">
+    <meta property="og:description" content="Блог про математику, розв'язання олімпіадних задач з математики.">
+    <meta property="og:url" content="https://maxvonlancaster.github.io/blog/index.html">
+    <meta property="og:image" content="https://maxvonlancaster.github.io/blog/images/logo.jpg">
 </head>
 
 <body>
