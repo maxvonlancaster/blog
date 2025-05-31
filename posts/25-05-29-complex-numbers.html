@@ -52,8 +52,13 @@
 
             <br>
 
+            <p>Комплексні числа також можна записувати у вигляді $x = r(\cos \alpha + i \sin \alpha)$, де $r$ - 
+                дійсне число, $\alpha$ кут між $0$ та $2\pi$</p>
+            
+            <br>
+
             <div class="problem">
-                <p><b>Формула Муавра</b>: для $z=r(\cos \varphi + i\sin \varphi)$ справджується: $$z^{n}=r^{n}(\cos
+                <p><b>Формула Муавра</b>: для $x=r(\cos \varphi + i\sin \varphi)$ справджується: $$x^{n}=r^{n}(\cos
                     n\varphi
                     + i\sin n\varphi)$$</p>
 
@@ -129,7 +134,7 @@
                         Покладемо $x = \frac{4}{5} + i\frac{3}{5}$, тоді $$x^{25} = (\frac{4}{5} + i\frac{3}{5})^{25} =
                         $$<br>
                         $$= (\frac{4}{5})^{25} + 25 (\frac{4}{5})^{24}\frac{3}{5} + ... + (i\frac{3}{5})^{25} = $$<br>
-                        $$= A + i\frac{3^{25} + 5m}{5^{25}}$$, де $A$, $m$ - дійсні числа<br>
+                        $$= A + i\frac{3^{25} + 5m}{5^{25}} = \cos 25\alpha + i\sin 25 \alpha,$$ де $A$, $m$ - дійсні числа<br>
                     </p>
                 </div>
             </div>
@@ -143,7 +148,7 @@
                     <p>$(s + it)^{n} = (r(\cos \alpha + i \sin \alpha))^{n} = r^{n} (\cos n\alpha +i\sin n \alpha ) = x
                         + iy$<br>
                         $x^{2} + y^{2} = r^{2n}\cos^{2} n\alpha + r^{2n}\sin^{2} n\alpha = r^{2n}(\cos^{2} n\alpha +
-                        \sin^{2} n\alpha) = $.<br>
+                        \sin^{2} n\alpha) = $<br>
                         $= r^{2n} = r^{2n}(\cos^{2}\alpha + \sin^{2}\alpha )^{n} = (r^{2}\cos^{2}\alpha +
                         r^{2}\sin^{2}\alpha )^{n} = (s^{2} + t^{2})^{n}$</p>
                 </div>
@@ -190,7 +195,7 @@
 </body>
 <script>
     let category = "25-05-29-complex-numbers.html";
-    let solutionsEnabled = true;
+    let solutionsEnabled = false;
 </script>
 <script src="../script.js"></script>
 <script src="../scripts/complex.js"></script>
