@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Тестовий Пост</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Нерівності</h1>
+
+            <div class="info">Деякі цікаві задачі для школярів на тему "Нерівності"</div>
+
+            <p><b>Нерівність Коші</b>: $x^{2}+y^{2}\geq 2xy.$ </p> <br />
+
+            <p><b>Нерівність Бернуллі</b>: $(1+x)^{\alpha}\leq 1+\alpha x$, $x\geq -1$, $0<\alpha <1$. </p>
+                    <br />
+
+                    <p><b>Нерівність Коші-Буняковського-Шварца</b>:
+                        $$(a_{1}^{2}+a_{2}^{2}+...+a_{n}^{2})(b_{1}^{2}+b_{2}^{2}+...+b_{n}^{2}) \geq
+                        (a_{1}b_{1}+a_{2}b_{2}+...+a_{n}b_{n})^{2}.$$ </p>
+                    <br />
+
+                    <p><b>Нерівність перестановок</b>:
+                        Нехай $x_{1}\geq x_{2}\geq ... \geq x_{n}$ та $y_{1}\geq y_{2}\geq ... \geq y_{n}$.
+                        Тоді для кожної перестановки $\sigma = \{\sigma_{1},\sigma_{2},...,\sigma_{n}\}$ чисел
+                        $(1,2,...,n)$
+                        виконується: $$x_{1}y_{1}+x_{2}y_{2}+...+x_{n}y_{n}\geq
+                        x_{1}y_{\sigma_{1}}+x_{1}y_{\sigma_{2}}+...+x_{1}y_{\sigma_{n}}\geq
+                        x_{1}y_{n}+x_{2}y_{n-1}+...+x_{n}y_{1}.$$ </p>
+                    <br />
+
+                    <br />
+                    <hr>
+                    <div class="problem">
+                        <div><b>Задача 1</b>. Нехай $a,b,c$ - додатні числа, сума яких рівна 1.
+                            Довести, що $$(1+a)(1+b)(1+c)\geq 8(1-a)(1-b)(1-c)$$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>Розкладемо вираз наступним чином:
+                                $$(a+1)(b+1)(c+1)=((a+b)+(a+c))((b+a)+(b+c))((c+a)+(c+b)) \geq $$
+                                та застосуємо нерівність Коші:
+                                $$\geq 2\sqrt{(a+b)(a+c)}2\sqrt{(b+a)(b+c)}2\sqrt{(c+a)(c+b)}=8(1-a)(1-b)(1-c)$$</p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. Нехай $a^{5}-a^{3}+a=2$. Довести, що $a^{6}>3$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>Перепишемо рівність у вигляді: $a(a^{4}-a^{2}+1) = 2$, та домножимо на $(a^{2}+1)$:
+                                $a(a^{2}+1)(a^{4}-a^{2}+1) = 2(a^{2}+1)$, звідси, за формулую суми степенів:
+                                $a^{6}+1= \frac{2(a^{2}+1)}{a}$. Звідси отримуємо:
+                                $a^{6}=\frac{2(a^{2}+1)}{a} - 1 = 2(a+\frac{1}{a})-1\geq$, за нерівністю Коші: $\geq
+                                2\cdot 2 - 1= 3$</p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Доведіть, що якщо $a>0$, $b>0$ та $ab>a+b$, то $a+b>4$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. Нехай $a>1$, $b<1$. Доведіть, що $a+b>1+ab$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Доведіть для всіх додатніх $a,b,c$ та $d$ 
+                            нерівність $$\sqrt{(a+c)(b+d)}\geq \sqrt{ab}+\sqrt{cd}.$$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b>. Доведіть нерівність $x^{2}+y^{2}+z^{2}+1\geq xy+yz+x+z$ 
+                            ($x$, $y$ та $z$ - дійсні числа).</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b>. Сума трьох додатніх чисел рівна 6. Довести, що сума їх квадратів не менша 12.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>. Для довільних $a,b,c$ доведіть нерівність 
+                            $$\frac{a^{2}}{4}+b^{2}+c^{2}\geq ab-ac+2bc.$$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 9</b>. Для всіх $x_{1},x_{2},x_{3},x_{4},x_{5}>0$ довести нерівність: 
+                            $$\frac{x_{1}^{2}}{x_{2}}+\frac{x_{2}^{2}}{x_{3}}+ \frac{x_{3}^{2}}{x_{4}}+\frac{x_{4}^{5}}{x_{2}} +\frac{x_{5}^{2}}{x_{1}} \geq x_{1}+x_{2}+x_{3}+x_{4}+x_{5}$$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "25-05-28-test.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>

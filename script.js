@@ -1,4 +1,5 @@
 const postFiles = [
+    "25-11-22-inequalities.html",
     "25-05-29-complex-numbers.html",
     "25-05-28-test.html",
 ]
@@ -35,6 +36,13 @@ function toggleSolution(header) {
         return;
     }
     const post = header.parentElement;
+    let children = post.children;
+    for(let i=0; i<children.length; i++){
+        let child = children[i];
+        if (child.tagName.toLowerCase() === 'button') {
+            child.innerHTML = post.classList.contains('open') ? 'Розв\'язок ▾' : 'Розв\'язок ▴';
+        }
+    }
     post.classList.toggle('open');
 }
 
