@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Тестовий Пост</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Ігри та стратегії</h1>
+
+            <div class="info">Деякі цікаві задачі для школярів на тему "Ігри та стратегії"</div>
+
+            <p>або в одного з гравців є спосіб виграти, не залежно від того, як грає інший. </p> <br />
+
+            <p>або у обох гравців одночасно є спосіб не програти (виграти, або отримати нічию).</p>
+                    <br />
+
+                    <p>Найкращий спосіб гри для даного гравця називається його <i>стратегією</i>.
+
+Доволі часто стратегії використовують або симетрію грального поля (гравець робить симетричні ходи до ходів противника), 
+або подільність гральних елементів на певні числа (гравець залишає після свого ходу кількість елементів, що ділиться 
+завжди на одне і те саме число).</p>
+                    <br />
+                    <hr>
+                    <div class="problem">
+                        <div><b>Задача 1</b>. Двоє по черзі кладуть монети на круглий стіл, причому так, що вони не 
+                            накладаються одна на одну. Програє той хто не зможе зробити хід. Який гравець 
+                            (перший чи другий) виграє, дотримуючись певної стратегії? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>Перший гравець кладе першу монетку в центр стола, а потім кожну наступну - 
+                                симетрично відносно центру до монетки другого гравця. Це є виграшною стратегією першого 
+                                гравця.</p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. На бумазі в клітинку намальовано прямокутник $7\times 13$. В лівому нижньому 
+                            кутку стоїть фішка. Стів і Тоні по черзі пересувають її на довільну кількість клітинок або 
+                            вправо, або вверх. Першим ходить Стів. Виграє той, хто поставить вішку в праву верхню клітинку. 
+                            Хто виграє при правильній грі? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Гра починається з числа 0. За хід дозволяється добавити до наявного числа 
+                            довільне натуральне число від 1 до 9. Виграє той, хто отримає число 200. Який гравець (перший 
+                            чи другий) має виграшну стратегію? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. В коробці 500 сірників. Двоє грають в гру - за хід можна викинути із коробки 
+                            довільну кількість сірників, яка не перевищує половину наявної в коробці кількості. Хто з гравців 
+                            виграє при правильній грі? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Є декілька кучок каміння. Двоє по черзі беруть з них камені. За один хід 
+                            дозволяється взяти від 1 до 5 каменів. Визначте виграшну стратегію в цій грі, якщо той, хто 
+                            взяв останній камінь, програє. </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b>. Доктор Стрейндж та доктор Лівсі грають в древню буддистську гру - на дошці 
+                            $21\times 98$ клітинок кожний гравець по черзі відмічає квадрат по лініях сітки (любого розміру) 
+                            і зафарбовує його. Виграє той, хто зафарбує останню клітинку. Двічі зафарбовувати клітинки не 
+                            можна. Хто виграє при правильній грі (починає Стрейндж) і як потрібно грати? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b>. На столі лежать 40 сірників. Рік Санчез та Тоні Старк грають в гру, де 
+                            за один раз дозволяється взяти від одного до чотирьох сірників зі столу. Програє той, 
+                            хто не може взяти сірник. В кого є виграшна стратегія (починає Санчез)? У випадку, 
+                            коли на столі 39 сірників? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>. (<i>Чернівці, обласна олімпіада 2018</i>) Денис і Максим грають у гру. 
+                            Вони по-черзі зафарбовоють клітинки таблиці розміром $6\times 6$. Починає Денис. 
+                            Гра закінчується, якщо у таблиці повністю зафарбовано два рядки, а гравець, який 
+                            зробив останній хід, виграє гру. Чи може хтось з гравців забезпечити собі виграш? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 9</b>. Двоє гравців грають в гру. За хід число, записане на дошці, 
+                            можна помножити на 2,3,...,9. Спочатку на дошці записано 1. Виграє той, хто першим 
+                            отримає число, більше за 1000. Хто з гравців має виграшну стратегію? </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 10</b>. Дано прямокутний паралелепіпед розмірами: 
+                            а) $4\times 4\times 4$, 
+                            б) $4\times 4\times 3$, 
+                            в) $4\times 3\times 3$, складений із кубиків $1\times 1\times 1$. 
+                            Двоє грають в наступну гру: за один хід дозволяється проткнути олівцем один ряд 
+                            ($1\times 1\times 4$) якщо в ньому нема ні одного не проткнутого кубика. 
+                            Програє той, хто не може зробити хід. Хто програє - перший чи другий гравець. </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p> </p>
+                        </div>
+                    </div>
+
+
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "25-12-06-games.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>

@@ -51,7 +51,7 @@ if(category){
 }
 
 async function loadComments(catg) {
-    let response = await fetch('https://chnu-student-interview-preparation.netlify.app/.netlify/functions/get-comments?category=' + catg);
+    let response = await fetch('https://backend-for-students-production.up.railway.app/api/comments/' + catg);
     if(!response.ok){
         console.error(response);
         return;
@@ -93,7 +93,7 @@ async function postComment(){
         return;
     }
 
-    let response = await fetch('https://chnu-student-interview-preparation.netlify.app/.netlify/functions/post-comment', {
+    let response = await fetch('https://backend-for-students-production.up.railway.app/api/comments', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
