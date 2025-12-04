@@ -104,11 +104,12 @@ nav:hover {
 
 .navbar-content{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
 }
 
 .nav-link a{
+    margin-right: 1.5rem;
     text-decoration: none;
 }
 

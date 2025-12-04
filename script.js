@@ -1,7 +1,8 @@
 const postFiles = [
+    "25-12-06-games.html",
     "25-11-22-inequalities.html",
     "25-05-29-complex-numbers.html",
-    "25-05-28-test.html",
+    "25-05-28-test.html"
 ]
 
 const previewContainer = document.getElementById('posts-preview');
