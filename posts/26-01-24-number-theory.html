@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Теорія чисел. Подільності та остачі.</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://www.chnu.edu.ua/abituriientu/zahalna-informatsiia/">Вступ</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Теорія чисел. Подільності та остачі.</h1>
+
+            <div class="info">Деякі цікаві задачі для школярів на тему "Теорія чисел. Подільності та остачі."</div>
+
+            <p>
+                Означення. Цілі числа $a$ та $b$ називаються еквівалентними по модулю $m$, якщо їхня різниця 
+                ділиться на $m$ без остачі. Позначаємо $a\equiv b (\mod m)$.
+            </p>
+            <p>
+                Для операції порівняння по модулю виконуються наступні властивості:
+
+            </p>
+            <p>
+                <ul>
+                    <li>$a\equiv b (\mod m)$ => $a+c\equiv b+c (\mod m)$ для довільного $c$.</li>
+                    <li>$a\equiv b (\mod m)$ => $a^{k}\equiv b^{k} (\mod m)$ для довільного $k\in \mathbb{N}$.</li>
+                    <li>$a\equiv b (\mod m)$ => $ac\equiv bc (\mod mc)$ для довільного $c$.</li>
+                    <li>$ad\equiv bd (\mod m)$ => $ad\equiv bd (\mod m)$ якщо НСД($m$,$d$)=1.</li>
+                    <li>$a\equiv b (\mod m)$ => $a\equiv b+cm (\mod m)$ для довільного- цілого $c$.</li>
+                </ul>
+            </p>
+
+            <p><b>Китайська теорема про остачі.</b> Нехай $a_{1},...,a_{n}$ - попарно прості натуральні числа, 
+                то для довільних натуральних $r_{1},...,r_{n}$, таких, що $0\leq r_{i}< a_{i}$ 
+                для кожного $i$, $0\leq i\leq n$, існує єдине число $x$, таке, що $x\equiv r_{i}(\mod a_{i})$.</p>
+                    <!-- <hr> -->
+                    
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 1</b>. Знайдіть останню цифру числа $1^{2}+2^{2}+...+99^{2}$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. Знайдіть остачу при діленні числа $6^{2025}=6\cdot 6\cdot 6\cdot ... \cdot 6$ 
+                            на $7$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Чи може сума квадратів двох непарних чисел бути квадратом цілого числа?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. Є 100 купюр двох номіналів, $a$ та $b$ монгольських тугриків, 
+                            $a\neq b (\mod 101)$. Доведіть, що можна вибрати декілька купюр так, 
+                            що отримана сума (в тугриках) ділиться на 101.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Чи можна розставити по кругу числа $1,2,...,60$ таким чином, щоб сумма 
+                            кожних двох чисел, між якими знаходяться шість чисел, ділилася на 7.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b> (обласна олімпіада 2026). Знайдіть усі пари натуральних чисел $(a,b)$, що 
+                        задовольняють умови: число $b + 1$ ділиться націло на число $a$ та число $2a + 1$ 
+                        ділиться націло на число $3b$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b> (обласна олімпіада 2026). Знайдіть всі четвірки чисел $(n, p, q, r)$, де 
+                            $n$ - натуральне число, а $p$, $q$, $r$ - прості числа, такі що $p^{2} + 2qr = 6^{n} + 1$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>. Знайти всі натуральні числа, які дають остачі 1,2,3,4 по модулям 
+                            5,7,11,12.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "25-12-13-turnaments.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>
