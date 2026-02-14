@@ -1,4 +1,5 @@
 const postFiles = [
+    "26-02-14-functional-equations.html",
     "26-01-24-number-theory.html",
     "25-12-06-games.html",
     "25-11-22-inequalities.html",

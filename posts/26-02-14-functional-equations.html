@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Функції однієї змінної. Функціональні рівняння.</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://www.chnu.edu.ua/abituriientu/zahalna-informatsiia/">Вступ</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Функції однієї змінної. Функціональні рівняння.</h1>
+
+            <div class="info">Деякі цікаві задачі для школярів на тему "Функції однієї змінної. Функціональні рівняння."</div>
+
+            <p>
+                <i>Функціональним рівнянням</i> називаются рівняння, в яких
+невідома функція пов’язана з відомими з допомогою арифметичних дій та
+операції утворення складеної функції.
+            </p>
+            <p>
+                Найпоширенішими способами розв'язання функціональних рівнянь є <i>спосіб підстановок</i> 
+                (підставляємо замість $x$ певний вираз, що залежить від $t$) та 
+                <i>спосіб невизначених коефіцієнтів</i> 
+                (підставляємо замість $f(x)$ функцію вигляду $f(x)=ax+b$ чи $f(x)=ax^{2}+bx+c$ та 
+                розв'язуємо відносно коефіцієнтів)
+
+            </p>
+                    
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 1</b>. Нехай для функції $f$ та довільних чисел $x$ та $y$ виконується 
+                            $f(xy)=f(x)+f(y).$ Знайти $f(100)$, якщо $f(\frac{1}{100})=1$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                <b>Спосіб підстановок:</b> При $y=1$, $f(x) = f(x) + f(1)$, отже $f(1)=0$. При $x=100$, 
+                                $y=\frac{1}{100}$: $f(1)=f(100)+f(\frac{1}{100})$, тобто, $f(100)=-f(\frac{1}{100})=-1$.
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. Знайдіть всі функції $f(x)$ визначені для всіх дійсних $x$, такі, що 
+                            виконується рівність $2f(x)+f(1-x)=x^{2}.$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Знайти всі неперервні функції, що задовільняють $f(f(x))=f(x)+x$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                <b>Cпосіб невизначених коефіцієнтів:</b> Логічним припущенням є те, що функція є лінійною, 
+                                отже $f(x)=ax+b$. Підставивши в рівняння, отримуємо $a^{2}x+ab+b=ax+b+x$, $(a^{2}-a-1)x=-ab$. 
+                                Ця рівність виконується тоді і тільки тоді, коли $a^{2}-a-1=0$ та $ab=0$, отже, $b=0$ та 
+                                $a=\frac{1\pm\sqrt{5}}{2}$, $f(x)=\frac{1\pm\sqrt{5}}{2} x$.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. Знайдіть усі многочлени $f(x)$, для яких $f(x-y)=f(x)+f(y) + 4y(x+1)$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Знайдіть всі такі функції $f(x)$, що для довільного $x$ виконується: 
+                            $f(2x+1)=4x^{2}+14x+7.$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b> Нехай для функції $f$ та довільного $x$ виконується $f(x)+(x+\frac{1}{2})f(1-x)=1.$ 
+                            а) Знайти $f(0)$ і $f(1)$. б) Знайти $f(x)$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b> Знайти всі функції $f$, такі, що для довільних $x,y,z$ виконується нерівність 
+                            $f(x+y)+f(y+z)+f(z+x)\geq 3f(x+2y+3z).$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>. Для яких дійсних $\alpha$ існує функція $f$ не рівна константі, така, 
+                            що для довільних $x,y$ виконується $f(\alpha(x+y))=f(x)+f(y).$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "25-12-13-turnaments.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>
