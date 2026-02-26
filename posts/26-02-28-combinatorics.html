@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Комбінаторика.</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://www.chnu.edu.ua/abituriientu/zahalna-informatsiia/">Вступ</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Комбінаторика.</h1>
+
+            <div class="info">Деякі цікаві задачі для школярів на тему "Комбінаторика."</div>
+
+            <p>
+                <b>Теорія.</b> <i>Перестановки</i> з $n$ елементів - такі їх сукупності, що відрізняються одна від
+                іншої лише порядком входження елементів. Їх кількість визначається за формулою $P_{n}=n!$.
+            </p>
+            <p>
+                <i>Розміщення</i> з $n$ елементів по $m$ - такі сукупності по $m$ елементів, що відрізняються одна від одної
+                принаймні
+                одним елементом або порядком їх входження. Визначаються формулою $A_{n}^{m}=\frac{n!}{(n-m)!}$.
+            </p>
+            <p>
+                <i>Сполуки</i> з $n$ елементів по $m$ - такі сукупності $m$ елементів, що відрізняються одна від одної принаймні
+                одним елементом, порядок входження при цьому не грає ролі (всі елементи вважаються однаковими). Формула:
+                $C_{n}^{m}=\frac{n!}{(n-m)!m!}$.
+            </p>
+            
+            
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 1</b>. Є 7 різнокольорових бусинок. Скільки із них можна вибрати намист? 
+                            А якщо є 8 чорних і білих бусинок по 4 кожного кольору?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. Скільки 5-значних чисел можна скласти з цілих чисел 1, 2, 4, 6, 7, 8, 
+                            якщо жодне ціле не можна використовувати більше одного разу? Скільки з цих чисел будуть 
+                            парними? Скільки непарних?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Скількома способами 8 тур можна розмістити на шахматній дошці так, щоб 
+                            вони не били одна одну. а) Всі тури одинакові. б) Всі тури різного кольору.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. Скількома способами можна розрізати намисто з 30 бусинок на 8 частин 
+                            (різати можна лише між бусинами)?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Скількома способами з полички з 20 книжками можна вибрати 5, які 
+                            не дотикаються.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b> Маємо $m$ білих та $n$ чорних шарів. Скількома способами можна розкласти їх в 
+                            ряд так, щоб жодні 2 чорні шари не були рядом?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b> $n$ пасажирів їдуть в автобусі і можуть вийти на одній з $m$ зупинок. 
+                            Скількома способами вони можуть вийти з автобуса, якщо:
+                            а) Всі люди різні б) Всі вони одинакові</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>. а) Жук повзе по лініях сітки з точки $(0,0)$ в точку $(n,n)$, 
+                            збільшуючи кожну з координат на 1. Скількома способами він може це зробити? 
+                            б) Тепер жук повзе по лініях тривимірної сітки з точки $(0,0,0)$ в точку $(n,n,n)$, 
+                            збільшуючи кожну з координат на 1. Скількома способами він може це зробити?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 9</b>. Скількома способами 25 чоловік можна розбити на 5 команд по 5 чоловік?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 10</b>. Скількома способами можна вибрати $k$ шарів з $n$ підряд так, щоб 
+                            не було 3 вибраних шари підряд.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 11</b>. 30 чоловік голосують за одну з 5 партій. Скількома способами можуть 
+                            розділитися голоси, якщо кожний голосує лише за одну партію, і враховується лише 
+                            кількість голосів, подану за кожну партію.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 12</b>. Скільки існує цілих чисел від 0 до 99999, в десятковому записі яких 
+                            немає двух однакових цифр, що стоять рядом?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "26-02-28-combinatorics.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>
