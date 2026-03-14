@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Прості числа.</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://www.chnu.edu.ua/abituriientu/zahalna-informatsiia/">Вступ</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Прості числа.</h1>
+
+            <div class="info">Деякі цікаві задачі для школярів на тему "Прості числа."</div>
+
+            <p>
+                <i>Просте число</i> — це натуральне число, більше за 1, єдиними додатними дільниками якого є воно й 1. 
+                Очевидно, що 2 є єдиним парним простим числом, тому 2 і 3 є єдиними послідовними простими числами. Ціле 
+                число, відмінне від 1, яке не є простим називається <i>складеним</i>. Зрозуміло, що якщо $n > 1$ - 
+                складене, то ми можемо записати $n$ у вигляді $n = ab$, $1 < a \leq b < n$, $a,b \leq N$.
+
+
+            </p>
+            <p>
+                <b>Теорема.</b> Існує нескінченна кількість простих чисел.
+
+            </p>
+            <p>
+                Для простих чисел $p_{1},...,p_{k}$ побудуємо $n=p_{1}p_{2}...p_{k}+1$, яке є 
+                або новим простим числом не з цього переліку, або ділиться на просте число $p$ не з 
+                цього переліку чисел.
+            </p>
+            
+            
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 1</b>. Знайти всі $n\in \mathbb{N}$ такі, що $n^{4}+4$ - просте.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                Розкладемо вираз наступним чином: 
+                                $n^{4}+4 = n^{4}+4n^{2}-4n^{2}+4 = (n^{2}+2)^{2}-4n^{2}= (n^{2}+2-2n)(n^{2}+2+2n)$ - 
+                                є складеним для кожного $n\in \mathbb{N}$, окрім $n=1$.
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. $p$, $p+40$ та $p+44$ - прості числа. Знайдіть $p$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                Нехай $p=3$, тоді $3+40=43$ та $3+44=47$ також прості.
+
+                                Нехай $p>3$, тоді $p=3k+1$ або $p=3k+2$. Якщо $p=3k+2$, то $p+40=3k+42$ - ділиться на 3, 
+                                якщо ж $p=3k+1$, то $p+44=3k+45$ - також ділиться на 3. Таким чином, $p=3$ - єдиний 
+                                розв'язок.
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Добуток трьох простих чисел в 23 рази більший, за їхню суму. Знайдіть ці числа.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                Нехай $p,q$ та $r$ - прості, $pqr=23(p+q+r)$. Оскільки добуток простих чисел ділиться на 
+                                23, яке саме є простим числом, то і одне з цих чисел ділиться на 23, а отже воно і рівне 23. 
+                                Далі, поклавши $p=23$, маємо $qr=23+q+r$, звідси $qr-q-r-1=24$, а отже $(q-1)(r-1)=24$. 
+                                Серед можливих розкладів числа 24 знаходимо, що нас задовільняють $q-1=4$ та $r-1=6$ 
+                                (в такому випадку $q=5$ та $r=7$) а також $q-1=2$ та $r-1=12$ 
+                                (в такому випадку $q=3$ та $r=13$).
+                                Отже, прості числа, що задовільняють умову задачі, це $23,5,7$ та $23,3,13$.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. $p$ та $p^{2}+8$ - прості числа. Доведіть, що $p^{3}+2$ - також просте 
+                            число.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                Якщо $p=3k+2$, то $p^{2}+8=9k^{2}+12k+12$ - ділиться на 3, якщо ж $p=3k+1$, то 
+                                $p^{2}+1=9k^{2}+6k+9$ - також ділиться на 3. Таким чином, єдине просте число, що 
+                                задовільняє умови задачі - $p=3$, $p^{2}+8 = 17$, $p^{3}+2=29$.
+
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Знайти всі прості числа $x,y$ та $z$, що задовільняють рівняння 
+                            $xy-31z=2015$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                Маємо, що $xy=31z + 2015 = 31(z + 65)$, отже, одне з чисел $x$ чи $y$ є рівним $31$. 
+                                Поклавши $x=31$, маємо $y-z = 65$, отже, числа $y$ та $z$ мають різну парність, таким 
+                                чином, $z=2$, а тоді $y=67$.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b>. Нехай для натурального числа $n$ числа $2n+1$ та $n+1$ - повні квадрати. 
+                            Чи є простим число $7n+3$?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                Позначимо $k^{2}=2n+1$ та $m^{2}=n+1$, та маємо: 
+                                $7n+3 = 4(2n+1)-(n+1)=4k^{2}-m^{2}=(2k-m)(2k+m)$.
+                                Розглянемо, чи може виконуватися рівність $2k-m=1$. 
+                                У такому випадку $7n+3=2k+m=2m+1$, та 
+                                $(m-1)^{2}=m^{2}-2m+1 = m^{2} - (2m + 1) + 2 = n+1-(7n+3)+2 = -6n$ - 
+                                суперечність, оскільки $(m-1)^{2}$ - завжди додатнє.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b>. </div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>. $p$, $4p^{2}+1$ та $6p^{2}+1$ - прості числа. Знайдіть $p$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 9</b>. Яке найменше натуральне $n$, таке, що $n!$ ділиться на $990$?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 10</b>. Відомо, що $56a=65b$. Доведіть, що $a+b$ - складене число.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 11</b>. Чи може число $n!$ закінчуватись рівно на 5 нулів?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 12</b>. Три попарно різних натуральних числа $a,b,c$ мають добуток 80. 
+                            Якому найменшому простому числу може дорівнювати їхня сума?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 13</b>. Вкажіть 20 послідовних натуральних чисел, серед яких немає 
+                            жодного простого.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 14</b>. Знайти всі $n\in \mathbb{N}$ такі, що $n^{5}+n^{4}+1$ - просте.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "26-03-14-prime-numbers.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>
