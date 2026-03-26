@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Діофантові рівняння.</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://www.chnu.edu.ua/abituriientu/zahalna-informatsiia/">Вступ</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Діофантові рівняння.</h1>
+
+            <div class="info">Деякі цікаві задачі для школярів на тему "Діофантові рівняння."</div>
+
+            <p>
+                <b>Діофантові рівняння</b> – це рівняння з раціональними коефіцієнтами, в яких невідомі змінні можуть 
+                набувати тільки цілих значень.
+            </p>
+            <p>
+                Важливим класом діофантовх рівнянь є лінійні рівняння вигляду $ax + by = c$, де $a ,b , c$ – цілі числа. 
+                Зрозуміло,
+                що
+                коли $c$ не ділиться на спільний дільник чисел $a$ та $b$ , то таке рівняння не має розв’язків у цілих числах. 
+                Якщо
+                ж
+                $a$ та $b$ взаємно прості, то існує нескінченна множина розв’язків: $x = x_{0} + bn $, $y = y_{0} - an$ , де
+                $(x_{0},y_{0})$
+                – який-небудь один (частковий) із розв’язків, $n\in \mathbb{Z}$.
+            </p>
+            
+            
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 1</b>. Знайти всі натуральні числа $x$, $y$, що є розв’язками рівняння 
+                            $$xy-3x+5y=25.$$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                $xy-3x+5y=25 => xy-3x+5y-15=10 => y(x+5)-3(x+5)=10 => (y-3)(x+5)=10$. Єдиними 
+                                натуральними розв'язками є $x=5$, $y=4$.
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. Довести, що рівняння $x^{2}-y^{2}=1005026$ не має розв’язків у цілих числах.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                Розкладемо $(x-y)(x+y)=1005026$. Якщо $x-y=2k$ - парне, тоді $x+y=2k+2y$ - 
+                                також парне, а отже, $(x-y)(x+y)$ ділиться на 4, а 1005026 не ділиться на 4. 
+                                Якщо $x-y=2k+1$ - непарне, тоді $x+y=2k+2y+1$ - також непарне, а отже, $(x-y)(x+y)$ 
+                                непарне, а 1005026 є парним.
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Розв’яжіть у простих числах рівняння: $xyz = 5(x+y+z)$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. Розв'яжіть рівняння $1!+2!+...+x!=y^{2}$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Чи існують натуральні числа $x$, $y$, які задовільняють рівняння 
+                            $$x^{3}-x = y^{2}+91$$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b>. Розв’язати у натуральних числах рівняння 
+                            $x+\frac{1}{y+\frac{1}{z}}=\frac{10}{7}.$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b>. Знайти всі прямокутні трикутники з цілочисловими довжинами
+сторін, одна з яких дорівнює 13.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>.  Учневі прислали 20 задач. За кожну розв’язану задачу він отримує 8 балів,
+неправильно розв’язану – мінус 5 балів і задачу, яку він не брався розв’язувати, – 0 балів.
+Скільки задач пробував розв’язати учень, якщо він набрав 13 балів?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 9</b>. Знайдіть всі розв’язки рівняння $19x+99y = 2002$ у натуральних числах.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 10</b>. 13 учнів з чотирьох різних класів написали 19 творів. Будь-які дав 
+                            однокласника написали однакову кількість творів, будь-які два школярі з різних класів 
+                            написали різну кількість творів. Скільки школярів написали по одному твору?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 11</b>. (Чернівці, обласна олімпіада 2018) Розв'яжіть в цілих числах 
+                            рівняння $xy+2018x-2018y=2019\cdot 2017.$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 12</b>. (Чернівці, обласна олімпіада 2016) Розв'яжіть рівняння 
+                            $747(2x-x^{2})-1269(y^{2}+2y)=2016$</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+                    
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "26-03-28-diophantine.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>

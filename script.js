@@ -1,4 +1,5 @@
 const postFiles = [
+    "26-03-28-diophantine.html",
     "26-03-14-prime-numbers.html",
     "26-02-28-combinatorics.html",
     "26-02-14-functional-equations.html",
