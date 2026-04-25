@@ -26,16 +26,6 @@ async function loadPosts() {
             if (h2 && info){
                 dict[file] = [h2.textContent, info.innerHTML];
             }
-            
-            // if (h2 && info) {
-            //     const previewDiv = document.createElement('div');
-            //     previewDiv.className = 'post-preview';
-            //     previewDiv.innerHTML = `
-            //     <h3><a href="posts/${file}">${h2.textContent}</a></h3>
-            //     <p>${info.innerHTML}</p>
-            //   `;
-            //     previewContainer.appendChild(previewDiv);
-            // }
         } catch (err) {
             console.error(`Error loading ${file}:`, err);
         }
