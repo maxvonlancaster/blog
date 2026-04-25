@@ -13,8 +13,9 @@ const postFiles = [
 
 const previewContainer = document.getElementById('posts-preview');
 
-function loadPosts() {
-    postFiles.sort().reverse().forEach(async (file) => {
+async function loadPosts() {
+    let dict = {};
+    const promises = postFiles.sort().reverse().map(async (file) => {
         try {
             const res = await fetch(`posts/${file}`);
             const html = await res.text();
@@ -22,20 +23,36 @@ function loadPosts() {
             const doc = parser.parseFromString(html, 'text/html');
             const h2 = doc.querySelector('h1');
             const info = doc.querySelector('.info');
-
-            if (h2 && info) {
-                const previewDiv = document.createElement('div');
-                previewDiv.className = 'post-preview';
-                previewDiv.innerHTML = `
-                <h3><a href="posts/${file}">${h2.textContent}</a></h3>
-                <p>${info.innerHTML}</p>
-              `;
-                previewContainer.appendChild(previewDiv);
+            if (h2 && info){
+                dict[file] = [h2.textContent, info.innerHTML];
             }
+            
+            // if (h2 && info) {
+            //     const previewDiv = document.createElement('div');
+            //     previewDiv.className = 'post-preview';
+            //     previewDiv.innerHTML = `
+            //     <h3><a href="posts/${file}">${h2.textContent}</a></h3>
+            //     <p>${info.innerHTML}</p>
+            //   `;
+            //     previewContainer.appendChild(previewDiv);
+            // }
         } catch (err) {
             console.error(`Error loading ${file}:`, err);
         }
     });
+
+    await Promise.all(promises);
+
+    dict = Object.fromEntries(Object.entries(dict).sort().reverse());
+    for (const [file, info] of Object.entries(dict)) {
+        const previewDiv = document.createElement('div');
+        previewDiv.className = 'post-preview';
+        previewDiv.innerHTML = `
+        <h3><a href="posts/${file}">${info[0]}</a></h3>
+        <p>${info[1]}</p>
+      `;
+        previewContainer.appendChild(previewDiv);
+    }
 }
 
 function toggleSolution(header) {
