@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon" />
+    <title>Графи.</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-content">
+            <div class="nav-links">
+                <div class="nav-link"><a href="../index.html">Головна</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://mathmod.chnu.edu.ua/">Кафедра математичного моделювання</a></div>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link"><a href="https://www.chnu.edu.ua/abituriientu/zahalna-informatsiia/">Вступ</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Графи.</h1>
+
+            <div>
+                <p>
+                <b>Степінь</b> $\delta(v)$ вершини $v$ - кількість ребр, що виходять з неї. 
+                При $\delta(v)=0$ -
+<b>ізольована</b>, при $\delta(v)=1$ - <b>кінцева</b> (висяча).</p>
+
+                <p>
+У будь-якому графі $G = (V, E)$ виконується рівність $\sum\limits_{v\in V}^{}\delta(v)=2|n_{e}|$,
+($n_{e}$ - число ребр).</p>
+
+                <p>
+Граф називають <b>зв'язним</b>, якщо будь-яку пару його вершин можна з'єднати деяким маршрутом.</p>
+
+                <p>
+<b>Грань графа</b> - такий регіон площини, кожні дві точки якого можна з'єднати кривою, що не має 
+перетинається з ребрами чи вершинами графа.</p>
+
+                <p>
+<b>Теорема 1. (Формула Ейлера)</b> Нехай $G$ - зв'язний плоский граф, в якому $n_{v}$, $n_{e}$ і $n_{f}$ відповідно число
+вершин, ребер і граней. Тоді має рівність $n_{v}+n_{f}=n_{e}+2$.</p>
+
+                <p>
+<b>Теорема 2. (Теорема Ейлера)</b> Зв'язний граф $G$ є ейлеровим (існує маршрут, що проходить через кожне ребро рівно один раз) 
+тоді й тільки тоді, коли степені всіх його вершин парні.
+</p>
+
+            </div>
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 1</b>. У Вестеросі кожен замок з'єднаний з кожним іншим замком дорогою. Новий 
+                            король хоче ввести на всіх дорогах односторонній рух так, щоб виїхавши з замку, в цей же 
+                            замок ніколи не можна було б вернутися. Чи завжди так можна зробити?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 2</b>. Доведіть, що число областей України, що мають непарне число сусідів, парне.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 3</b>. Дано повний (кожні дві вершини мають спільне ребро) граф з 17 вершин. 
+                            Кожне ребро цього графу зафарбовано в один з троьх кольорів. Доведіть, що існують три вершини, 
+                            що формують трикутник одного кольору.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 4</b>. Турист хоче прогулятися по центру міста з точки $A$ в точку $B$ по якомога 
+                            довшому маршруту, але при цьому не опиняючись на одному перехресті більше одного разу. 
+                            Знайдіть найдовший можливий маршрут, і доведіть, що довшого бути не може.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <img src="./imgs/grid.png" alt="">
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 5</b>. Чи можна намалювати кожну із цих двох картинок, не відриваючи олівець від 
+                            паперу, і проходячи по кожній лінії лише один раз?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <img src="./imgs/paint.jpg" alt="" style="width: 100%;">
+
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 6</b>. Чи можна скласти решітку $4\times 4$ із: а) 5 ламаних довжиною $8$. 
+                            б) 8 ламаних довжиною $5$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 7</b>. В компанії у кожних двох людей є рівно $5$ спільних знайомих. Доведіть, 
+                            що кількість пар знайомих ділиться на $3$.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 8</b>. У далекому королівстві міста з'єднані дорогами, що не перетинаються за межами міст. 
+                            В кожному місті встановлена табличка, на якій вказана мінімальна довжина маршруту, що виходить з 
+                            цього міста і проходить через всі інші міста (він може проходити через одне місто більше одного 
+                            разу і не має вертатися в вихідне місто). Доведіть, що в довільних двох містах ці числа не 
+                            відрізняються більше ніж в півтора рази.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 9</b>. В країні є 64 міста, які можуть, або можуть не бути з'єднані між собою 
+                            дорогами. Ми можемо вибрати довільні два міста і запитати - чи з'єднані вони, чи ні. 
+                            Потрібно визначити, чи можна в цьому місті добратися з довільного міста в довільне інше. 
+                            Чи існує алгоритм, за яким можна взнати це за менш ніж 2016 питань.</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 10</b>. Чи можна з'єднати кожен із трьох будинків із кожним із трьох ресурсів 
+                            (електрика, водопостачання та отеплення) так, щоб жодна з ліній не перетиналась? (див. рис.)</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <img src="./imgs/three_houses.jpg" alt="" style="width: 100%;">
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 11</b>. Чи можна з'єднати кожен із п'яти будинків один із одним стежками так, 
+                            щоб ці стежки не перетиналися? (див. рис.)</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <img src="./imgs/five_houses.png" alt="" style="width: 100%;">
+
+
+
+                    <br />
+                    <div class="problem">
+                        <div><b>Задача 12</b>. Задача про Кенігсберзькі мости: знайти такий маршрут через місто, 
+                            щоб пройти всі сім мостів і кожним мостом пройти рівно один раз?</div>
+                        <button onclick="toggleSolution(this)" class="dropdown-btn">Розв'язок ▾</button>
+                        <div class="solution">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                    <img src="./imgs/10_01.png" alt="" style="width: 100%;">
+
+                    
+
+                    <section class="comment-section">
+                        <h3>Залиште коментарій</h3>
+                        <input type="text" id="nameInput" placeholder="Your name" required />
+                        <textarea id="commentInput" placeholder="Your comment" rows="4" required></textarea>
+                        <button id="submitButton" onclick="postComment()">Submit</button>
+
+                        <h3>Коментарії</h3>
+                        <div class="comments-display" id="commentsDisplay">
+
+                        </div>
+                    </section>
+        </div>
+    </div>
+</body>
+<script>
+    let category = "26-04-25-graphs.html";
+    let solutionsEnabled = true;
+</script>
+<script src="../script.js"></script>
+
+</html>
